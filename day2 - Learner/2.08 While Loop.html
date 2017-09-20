@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Javascript While loop from 1 to 10</title>
+</head>
+<body>
+<h1>Javascript While Loop</h1>
+<h2>While loop from 1 to 10</h2>
+<input type="button" value="Display 1 to 10" onclick= "test()"/>
+<p id="theoutput">display</p>
+
+ 
+    
+
+<script>
+    
+    var obj = document.getElementById("theoutput");
+    function test(){
+    var i  = 0;
+    while(i<=10){
+    obj.innerHTML = obj.innerHTML + "<br/>"  + i;
+    i++;
+    }
+    }
+</script>	
+
+
+</body>
+</html>
