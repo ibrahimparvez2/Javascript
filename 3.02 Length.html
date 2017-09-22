@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Javascript - Array Length</title>
+
+</head>
+<body>
+<h1>Javascript - Arrays, Array length</h1>
+<h2>Array Length</h2>
+<input id = "userI" />
+<input type="button" value="Push value to array" id = "push" />
+<p id="result"></p>
+<p id="lengthcounter"></p>
+	
+<script>
+
+var element = document.getElementById("userI");
+var push = document.getElementById("push");
+var result = document.getElementById("result");
+var x;
+/*CAN CONSOLE LOG GLOBAL VARIABLES*/
+/*element.addEventListener("click", "myArray", false)*/
+    
+/*element.addEventListener("click", showelement, false);*/
+push.addEventListener("click", myArray, false);
+var myScript = [];
+
+function myArray() {
+    
+    var x = element.value;
+    console.log(x);
+    myScript.push(x);
+    console.log(myScript);
+    result.innerHTML = "the length of the array is " +  myScript.length;
+}
+    
+/*function showelement () {
+
+console.log(element.value);
+    
+}*/
+
+</script>
+	
+</body>
+</html>

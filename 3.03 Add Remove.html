@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Javascript pop element from array</title>
+
+</head>
+<body>
+<h1>Javascript labs</h1>
+<h2>Lab 22 - Pop element from array</h2>
+<input id="push" />
+<!--  add element to end of array -->
+<input type="button" value="Push member to array" id = "do") />
+<!--  remove last element of the array -->
+<input type="button" value="Pop member from array" id = "pop" />
+<!--  remove the first element of the array -->
+<input type="button" value="Shift member from array" id="shiftU" />
+<!--  add to the first element of the array -->
+<input type="button" value="uNShift member from array" id ="unshift" />
+
+<p id="lab22result"></p>
+<p id="lab22result"></p>
+	
+<script>
+
+var input = document.getElementById("push");
+
+var addArray= document.getElementById("do");
+var removeArray = document.getElementById("pop");
+var results = document.getElementById("lab22result");
+var shiftUp = document.getElementById("shiftU");
+var shiftD = document.getElementById("unshift");
+
+/*var popE = document.getElementById();
+var removeE = document.getElementById();
+var addE = document.getElementById();*/
+
+ 
+    
+ addArray.addEventListener("click", add, "false");
+ removeArray.addEventListener("click", remove, "false");
+ shiftD.addEventListener("click", shiftD, "false");
+
+
+    
+    
+    
+    
+ var myScript = [];
+    
+        function add(){
+                /*console.log(pushE.value);*/
+                myScript.push(input.value);
+                console.log(myScript);
+                results.innerHTML = myScript;
+        }
+    
+        function remove(){
+                /*console.log(pushE.value);*/
+                myScript.pop(myScript);
+                console.log(myScript);
+                results.innerHTML = myScript;
+        }
+    
+    
+      function shiftD() {
+      
+          
+  var move = function(array, element, delta) {
+  var index = array.indexOf(element);
+  var newIndex = index + delta;
+  if (newIndex < 0  || newIndex == array.length) return; //Already at the top or bottom.
+  var indexes = [index, newIndex].sort(); //Sort the indixes
+  array.splice(indexes[0], 2, array[indexes[1]], array[indexes[0]]); //Replace from lowest index, two elements, reverting the order
+};
+
+var moveUp = function(array, element) {
+  move(array, element, 1);
+};
+
+var moveDown = function(array, element) {
+  move(array, element, -1);
+};
+
+//Test
+var array = [1, 2, 3, 4, 5];
+moveUp(array, 4);
+moveUp(array, 2);
+moveDown(array, 5); 
+
+
+      } 
+
+       
+        
+  
+/*var move = function(array, element, delta) {
+  var index = array.indexOf(element);
+  var newIndex = index + delta;
+  if (newIndex < 0  || newIndex == array.length) return; //Already at the top or bottom.
+  var indexes = [index, newIndex].sort(); //Sort the indixes
+  array.splice(indexes[0], 2, array[indexes[1]], array[indexes[0]]); //Replace from lowest index, two elements, reverting the order
+};
+
+var moveUp = function(array, element) {
+  move(array, element, -1);
+};
+
+var moveDown = function(array, element) {
+  move(array, element, 1);
+};
+
+//Test
+var array = [1, 2, 3, 4, 5];
+moveUp(array, 4);
+moveUp(array, 2);
+moveDown(array, 5);     */     
+        
+    
+    
+</script>
+
+</body>
+</html>
